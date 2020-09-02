@@ -1,6 +1,6 @@
 "编写一个算法找出正数、小数、负数的立方根"
 
-def cube_root(cube, error_value):
+def cube_root(cube, epsilon):
  
     positive_num  = abs(cube)
     low = 0
@@ -15,4 +15,4 @@ def cube_root(cube, error_value):
  
         guess = (low + high) / 2.
  
-    return mid if num>=0 else -mid
+    return mid if cube>=0 else -mid
